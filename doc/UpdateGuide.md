@@ -10,7 +10,7 @@ fork元の本家リポジトリ( https://github.com/tiscon/tiscon2 ) に更新�
 
 https://github.com/tiscon/tiscon2.git を tiscon という名前でリモートリポジトリに追加します。
 
-IntelliJで `VCS` > `Git` > `Remotes` をクリック
+IntelliJで `VCS` > `Git` > `Remotes` をクリック。
 
 ![IntelliJでGit Remotesを開く](image/update_guide_add_remote_1.png)
 
@@ -22,9 +22,17 @@ nameに `tiscon` 、 URLに `https://github.com/tiscon/tiscon2.git` と入力し
 
 tisconのmasterブランチをローカルのmasterブランチにダウンロードします。
 
-### 操作手順n
+IntelliJで `VCS` > `Git` > `Pull` をクリック。
 
-### もしxxxというメッセージが表示されたら
+![IntelliJでPull](image/update_guide_pull_1.png)
+
+Pullのオプションを選ぶ画面が表示されるので、OKをクリック。
+
+もし「File Merged with Conflicts」という以下のようなメッセージが表示されたら、本家リポジトリの変更内容とローカルの変更内容が競合しています。
+
+![競合発生](image/update_guide_pull_2.png)
+
+`Merge` ボタンをクリックして変更内容を確認し、残しておきたい方の変更を取り込んでください。
 
 ## 自分のリポジトリに変更をアップロードする
 
