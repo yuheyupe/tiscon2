@@ -27,7 +27,7 @@ T社のエンジニアが作ったアプリは
 
 ## 環境構築
 
-下記リンクtiscon2-doc内のREADMEを参考に、環境構築をしてください。  
+下記リンクtiscon2-startup-guide内のREADMEを参考に、環境構築をしてください。  
 [【tiscon2-startup-guide】](https://github.com/tiscon/tiscon2-startup-guide)
 
 ローカル上での動作確認まで終わったら、オンライン上での動作確認をします。  
