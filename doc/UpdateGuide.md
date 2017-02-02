@@ -30,7 +30,7 @@ Pullのオプションを選ぶ画面が表示されるので、
 
 ![Pull画面](image/update_guide_pull_2.png)
 
-OKをクリック。
+Pullをクリック。
 
 もし「File Merged with Conflicts」という以下のようなメッセージが表示されたら、本家リポジトリの変更内容とローカルの変更内容が競合しています。
 
