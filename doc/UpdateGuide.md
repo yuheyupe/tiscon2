@@ -26,11 +26,15 @@ IntelliJで `VCS` > `Git` > `Pull` をクリック。
 
 ![IntelliJでPull](image/update_guide_pull_1.png)
 
-Pullのオプションを選ぶ画面が表示されるので、OKをクリック。
+Pullのオプションを選ぶ画面が表示されるので、
+
+![Pull画面](image/update_guide_pull_2.png)
+
+OKをクリック。
 
 もし「File Merged with Conflicts」という以下のようなメッセージが表示されたら、本家リポジトリの変更内容とローカルの変更内容が競合しています。
 
-![競合発生](image/update_guide_pull_2.png)
+![競合発生](image/update_guide_pull_3.png)
 
 `Merge` ボタンをクリックして変更内容を確認し、残しておきたい方の変更を取り込んでください。
 
