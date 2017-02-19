@@ -14,6 +14,10 @@ import net.unit8.sigcolle.form.SignatureForm;
 import net.unit8.sigcolle.model.UserCampaign;
 import net.unit8.sigcolle.model.Signature;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import static enkan.util.BeanBuilder.builder;
 import static enkan.util.HttpResponseUtils.RedirectStatusCode.SEE_OTHER;
 import static enkan.util.HttpResponseUtils.redirect;
@@ -36,11 +40,23 @@ public class CampaignController {
         SignatureDao signatureDao = domaProvider.getDao(SignatureDao.class);
         int signatureCount = signatureDao.countByCampaignId(campaignId);
 
+
+        List<String> list;
+//        list = new ArrayList<String>();
+
+//        list = signatureDao.testComment();
+
+//        String comment = signatureDao.testComment();
+//
+//        System.out.print("てすと" + comment);
+
+
         return templateEngine.render("campaign",
                 "campaign", campaign,
                 "signatureCount", signatureCount,
                 "signature", signature,
-                "message", message
+                "message", message,
+                "comments", signatureDao.testComment(campaignId)
         );
     }
 

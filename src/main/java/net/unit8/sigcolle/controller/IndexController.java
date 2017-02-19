@@ -20,5 +20,6 @@ public class IndexController {
     public HttpResponse index() {
         CampaignDao campaignDao = domaProvider.getDao(CampaignDao.class);
         return templateEngine.render("index", "campaigns", campaignDao.selectAll());
+//        return templateEngine.render("index");
     }
 }

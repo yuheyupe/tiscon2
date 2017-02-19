@@ -1,7 +1,6 @@
 package net.unit8.sigcolle.model;
 
 import java.io.Serializable;
-
 import lombok.Data;
 import org.seasar.doma.Entity;
 import org.seasar.doma.GeneratedValue;
@@ -9,21 +8,20 @@ import org.seasar.doma.GenerationType;
 import org.seasar.doma.Id;
 
 /**
- * @author kawasima
+ * Created by 2140261 on 2017/02/18.
  */
 @Entity
 @Data
-public class Campaign implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long campaignId;
+public class NewCampaign implements Serializable {
 
-    private String title;
+    private String newCampaignTitle;
 
     // Markdown description
-    private String statement;
+    private String newCampaignStatement;
 
-    private Long goal;
+    private Long newCampaignGoal;
 
-    private Long createUserId;
+    private Long newCampaignCreateUserId;
+
+
 }

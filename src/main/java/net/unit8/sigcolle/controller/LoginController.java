@@ -46,10 +46,12 @@ public class LoginController {
      */
     @Transactional
     public HttpResponse login(LoginForm form) {
+        if (form.hasErrors()) {
+            return templateEngine.render("login", "login", form);
+        }
 
         UserDao userDao = domaProvider.getDao(UserDao.class);
         User user;
-        Multimap errors = Multimap.empty();
 
         // メールアドレス存在チェック
         try {

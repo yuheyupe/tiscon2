@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Campaign!!</title>
+    <link href="http://fonts.googleapis.com/css?family=Exo:900" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/semantic-ui/2.2.6/semantic.min.css" rel="stylesheet"/>
+    <link href="/css/main.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="pusher">
+    <div th:replace="/shared/_header::header"></div>
+
+    <div class="full height image">
+        <div class="ui main container">
+            <div class="ui information container">
+                <div class="ui middle aligned center aligned grid">
+                    <div class="center column">
+
+                        <form class="ui form" method="post" action="/newcampaign">
+
+                            <div class="ui grid">
+                                <div class="13 wide column">
+                                    <input type="text" name="name" placeholder="作成者"/>
+                                    <div class="goalset">
+                                        <input type="number" name="newCampaignGoal" placeholder="ゴール達成人数"/>
+                                    </div>
+                                    <div class="statement">
+                                        <div>
+                                            <label>タイトル</label>
+                                            <input type="text" name="newCampaignTitle" class="" method="" />
+                                        </div>
+                                        <div>
+                                            <label>内容</label>
+                                            <textarea name="newCampaignStatement" class="" method="">
+                                    </textarea>
+                                        </div>
+                                    </div>
+
+                                    <input type="submit" class="ui fluid red button" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

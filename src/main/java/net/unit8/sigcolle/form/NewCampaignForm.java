@@ -9,21 +9,30 @@ import net.unit8.sigcolle.validator.Password;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.Length;
 
-/**
- * @author takahashi
- */
 @Data
-public class LoginForm extends FormBase {
+public class NewCampaignForm extends FormBase {
 
+    //作成者名
     @NotNull
-    @Length(min = 1, max = 50)
-    @Email
-    private String email;
+    @Length(min = 1, max = 20)
+//    @Password
+    private String createUserName;
 
+    //タイトル
     @NotNull
-    @Length(min = 4, max = 20)
-    @Password
-    private String pass;
+    @Length(min = 1, max = 100)
+    private String newCampaignTitle;
+
+    //キャンペーン本文
+    @NotNull
+    @Length(min = 1, max = 1000)
+    private String newCampaignStatement;
+
+    //達成人数(ゴール,long)
+    @NotNull
+    private Long newCampaignGoal;
+//    @Length(min = 1, max = 6)
+
 
     @Override
     public boolean hasErrors() {
@@ -39,4 +48,8 @@ public class LoginForm extends FormBase {
     public List<String> getErrors(String name) {
         return super.getErrors(name);
     }
+
+
+
+
 }

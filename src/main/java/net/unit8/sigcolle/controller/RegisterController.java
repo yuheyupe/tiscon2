@@ -10,7 +10,7 @@ import enkan.data.Session;
 import kotowari.component.TemplateEngine;
 import net.unit8.sigcolle.auth.LoginUserPrincipal;
 import net.unit8.sigcolle.dao.UserDao;
-import net.unit8.sigcolle.form.UserForm;
+import net.unit8.sigcolle.form.RegisterForm;
 import net.unit8.sigcolle.model.User;
 
 import static enkan.util.BeanBuilder.builder;
@@ -34,7 +34,7 @@ public class RegisterController {
      * @return HttpResponse
      */
     public HttpResponse index() {
-        return templateEngine.render("register", "user", new UserForm());
+        return templateEngine.render("register", "user", new RegisterForm());
     }
 
     /**
@@ -43,7 +43,7 @@ public class RegisterController {
      * @return HttpResponse
      */
     @Transactional
-    public HttpResponse register(UserForm form) {
+    public HttpResponse register(RegisterForm form) {
 
         if (form.hasErrors()) {
             return templateEngine.render("register", "user", form);

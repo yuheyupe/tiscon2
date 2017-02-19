@@ -4,22 +4,18 @@ import java.util.List;
 
 import net.unit8.sigcolle.DomaConfig;
 import net.unit8.sigcolle.model.Campaign;
+import net.unit8.sigcolle.model.NewCampaign;
 import net.unit8.sigcolle.model.UserCampaign;
 import org.seasar.doma.Dao;
 import org.seasar.doma.Insert;
 import org.seasar.doma.Select;
 
 /**
- * @author kawasima
+ * Created by 2140261 on 2017/02/18.
  */
+
 @Dao(config = DomaConfig.class)
-public interface CampaignDao {
-    @Select(ensureResult = true)
-    UserCampaign selectById(Long campaignId);
-
-    @Select
-    List<Campaign> selectAll();
-
+public interface NewCampaignDao {
     @Insert
-    int insert(Campaign campaign);
+    int insert(NewCampaign newCampaign);
 }

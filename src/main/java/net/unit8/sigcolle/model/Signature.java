@@ -14,6 +14,8 @@ import org.seasar.doma.Id;
 @Entity
 @Data
 public class Signature implements Serializable {
+
+    //賛同数
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long signatureId;
@@ -21,5 +23,6 @@ public class Signature implements Serializable {
     private String name;
     private String signatureComment;
 
+    //賛同される側のキャンペーンID
     private Long campaignId;
 }
